@@ -43,7 +43,8 @@ Plugin 'gmarik/Vundle.vim'
 " Avoid a name conflict with L9
 ""Plugin 'user/L9', {'name': 'newL9'}
 
-Plugin 'jdonaldson/vaxe'
+"Plugin 'jdonaldson/vaxe'
+Plugin 'rf-/vaxe'
 Plugin 'bling/vim-airline'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
