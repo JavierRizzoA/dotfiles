@@ -4,11 +4,11 @@ My Unix dotfiles
 
 ## Installation
 
-Just clone and run `dotfiles`. I.e.:
+Just clone and run `dotfiles.sh`. I.e.:
 
 ```bash
 git clone https://github.com/JavierRizzoA/dotfiles.git ~/.dotfiles
-~/.dotfiles/dotfiles
+~/.dotfiles/dotfiles.sh
 ```
 
 ## License
