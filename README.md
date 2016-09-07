@@ -4,7 +4,7 @@ My Unix dotfiles
 
 ## Installation
 
-just clone and run `dotfiles`. Eg.:
+Just clone and run `dotfiles`. I.e.:
 
 ```bash
 git clone https://github.com/JavierRizzoA/dotfiles.git ~/.dotfiles
