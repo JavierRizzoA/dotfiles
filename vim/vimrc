@@ -265,6 +265,6 @@ endif
 set t_Co=256 "To correctly display colorscheme in terminals
 "colorscheme atom-dark-256
 colorscheme badwolf
-set colorcolumn=80
+set colorcolumn=81
 au BufNewFile,BufRead *.txt,*.wiki setlocal colorcolumn=
 "--------------------------------------------------
