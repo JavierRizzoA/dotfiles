@@ -1,9 +1,13 @@
-" Javier Rizzo
-" 2015
-    
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
+
+" 'THE BEER-WARE LICENSE' (Revision 42):
+" Javier Rizzo <javierrizzoa@gmail.com> wrote this file. As long as you retain
+" this notice you can do whatever you want with this stuff. If we meet some day,
+" and you think this stuff is worth it, you can buy me a beer in return.
+
+" ------------------------------------------------------------------------------
 "	VUNDLE
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -80,9 +84,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 "	PLUGIN CONFIG
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 
 " NerdTree
 noremap <C-n> :NERDTreeToggle<CR>
@@ -92,7 +96,7 @@ augroup nerdtree
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END
 
-"-------------------------
+" ------------------------------------------------------------------------------
 
 " Airline
 set laststatus=2
@@ -105,12 +109,12 @@ endif
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 
-"-------------------------
+" ------------------------------------------------------------------------------
 
 "Syntastic
 let g:syntastic_python_python_exec = '/usr/bin/python2'
 
-"-------------------------
+" ------------------------------------------------------------------------------
 
 " vim-tab
 "reload GTAGS, ctags.
@@ -151,9 +155,9 @@ call tab#TabAddTrigger(g:TabTagTrigger)
 "nnoremap 9 :tabn 9<cr>
 "nnoremap <C-c> :tabclose<cr>
 
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 "	MISC
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 
 filetype on
 syntax on
@@ -185,9 +189,9 @@ elseif has("win32")
     set clipboard+=unnamed
 endif
 
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 "	FILETYPE SPECIFIC
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 
 augroup read_optimized
     autocmd!
@@ -205,9 +209,9 @@ augroup filetype_python
     au Filetype python setlocal ts=4 sw=4
 augroup END
 
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 "   KEY MAPS
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 
 let maplocalleader = ","
 
@@ -247,9 +251,9 @@ if has('nvim')
     nnoremap <A-l> <C-w>l
 endif
 
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 "	GRAPHIC OPTIONS
-"--------------------------------------------------
+" ------------------------------------------------------------------------------
 
 " Remove GUI in gVIM"
 if has('gui_running')
@@ -264,4 +268,5 @@ set t_Co=256 "To correctly display colorscheme in terminals
 colorscheme badwolf
 set colorcolumn=81
 au BufNewFile,BufRead *.txt,*.wiki setlocal colorcolumn=
-"--------------------------------------------------
+
+" ------------------------------------------------------------------------------
