@@ -178,19 +178,8 @@ set visualbell t_vb=
 set novisualbell
 set backspace=indent,eol,start
 
-function! ClipboardYank()
-  call system('xclip -i -selection clipboard', @@)
-endfunction
-function! ClipboardPaste()
-  let @@ = system('xclip -o -selection clipboard')
-endfunction
-
 " Yank & Put to/from standard clipboard
-if has("nvim")
-  vnoremap <silent> y y:call ClipboardYank()<cr>
-  vnoremap <silent> d d:call ClipboardYank()<cr>
-  nnoremap <silent> p :call ClipboardPaste()<cr>p
-elseif has("unix")
+if has("unix")
     set clipboard+=unnamedplus
 elseif has("win32")
     set clipboard+=unnamed
