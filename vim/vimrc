@@ -14,16 +14,16 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 if has("nvim")
-    set rtp+=~/.config/nvim/bundle/Vundle.vim
-    let path='~/.nvim/bundle'
-    call vundle#begin(path)
+  set rtp+=~/.config/nvim/bundle/Vundle.vim
+  let path='~/.nvim/bundle'
+  call vundle#begin(path)
 elseif has("unix")
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 elseif has("win32")
-    set rtp+=~/vimfiles/bundle/Vundle.vim/
-    let path='~/vimfiles/bundle'
-    call vundle#begin(path)
+  set rtp+=~/vimfiles/bundle/Vundle.vim/
+  let path='~/vimfiles/bundle'
+  call vundle#begin(path)
 endif
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -92,8 +92,8 @@ filetype plugin indent on    " required
 noremap <C-n> :NERDTreeToggle<CR>
 
 augroup nerdtree
-    autocmd!
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  autocmd!
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END
 
 " ------------------------------------------------------------------------------
@@ -119,24 +119,24 @@ let g:syntastic_python_python_exec = '/usr/bin/python2'
 " vim-tab
 "reload GTAGS, ctags.
 function! TabReloadCGtag()
-	"reload GTAGS in current directory
-	cs kill 0
-	"gnu global produce GTAGS, more useful than cscope
-	cs add GTAGS
-	"reload tags in current directory
-	set tags=tags
+  "reload GTAGS in current directory
+  cs kill 0
+  "gnu global produce GTAGS, more useful than cscope
+  cs add GTAGS
+  "reload tags in current directory
+  set tags=tags
 endfunction
 
 "some action when enter a tab
 function! TabEnterTag(nr)
-	"echo "tab ". a:nr . " enter"
-	call TabReloadCGtag()
+  "echo "tab ". a:nr . " enter"
+  call TabReloadCGtag()
 endfunction
 
 "some action when leave a tab
 function! TabLeaveTag(nr)
-	"echo "tab ". a:nr . " leaves"
-	"nothing
+  "echo "tab ". a:nr . " leaves"
+  "nothing
 endfunction
 let g:TabTagTrigger = {'name':'TabTagTriger','pattern':"pattern", 'enter_callback':"TabEnterTag", 'leave_callback':"TabLeaveTag" }
 
@@ -184,9 +184,9 @@ set backspace=indent,eol,start
 
 " Yank & Put to/from standard clipboard
 if has("unix")
-    set clipboard+=unnamedplus
+  set clipboard+=unnamedplus
 elseif has("win32")
-    set clipboard+=unnamed
+  set clipboard+=unnamed
 endif
 
 " ------------------------------------------------------------------------------
@@ -194,19 +194,19 @@ endif
 " ------------------------------------------------------------------------------
 
 augroup read_optimized
-    autocmd!
-    "TXTs and WIKIs should wrap for readability
-    au BufNewFile,BufRead *.txt,*.wiki setlocal wrap lbr
-    "Mappings should be graphical, as text is wrapped.
-    au BufNewFile,BufRead *.txt,*.wiki noremap j gj
-    au BufNewFile,BufRead *.txt,*.wiki noremap k gk
-    au BufNewFile,BufRead *.txt,*.wiki noremap $ g$
-    au BufNewFile,BufRead *.txt,*.wiki noremap 0 g0
+  autocmd!
+  "TXTs and WIKIs should wrap for readability
+  au BufNewFile,BufRead *.txt,*.wiki setlocal wrap lbr
+  "Mappings should be graphical, as text is wrapped.
+  au BufNewFile,BufRead *.txt,*.wiki noremap j gj
+  au BufNewFile,BufRead *.txt,*.wiki noremap k gk
+  au BufNewFile,BufRead *.txt,*.wiki noremap $ g$
+  au BufNewFile,BufRead *.txt,*.wiki noremap 0 g0
 augroup END
 
 augroup filetype_python
-    autocmd!
-    au Filetype python setlocal ts=4 sw=4
+  autocmd!
+  au Filetype python setlocal ts=4 sw=4
 augroup END
 
 " ------------------------------------------------------------------------------
@@ -239,16 +239,16 @@ onoremap il} :<c-u>normal! F}vi{<cr>
 nnoremap <C-o> o<esc>
 
 if has('nvim')
-    tnoremap <Esc> <C-\><C-n>
-    tnoremap jk <C-\><C-n>
-    tnoremap <A-h> <C-\><C-n><C-w>h
-    tnoremap <A-j> <C-\><C-n><C-w>j
-    tnoremap <A-k> <C-\><C-n><C-w>k
-    tnoremap <A-l> <C-\><C-n><C-w>l
-    nnoremap <A-h> <C-w>h
-    nnoremap <A-j> <C-w>j
-    nnoremap <A-k> <C-w>k
-    nnoremap <A-l> <C-w>l
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap jk <C-\><C-n>
+  tnoremap <A-h> <C-\><C-n><C-w>h
+  tnoremap <A-j> <C-\><C-n><C-w>j
+  tnoremap <A-k> <C-\><C-n><C-w>k
+  tnoremap <A-l> <C-\><C-n><C-w>l
+  nnoremap <A-h> <C-w>h
+  nnoremap <A-j> <C-w>j
+  nnoremap <A-k> <C-w>k
+  nnoremap <A-l> <C-w>l
 endif
 
 " ------------------------------------------------------------------------------
@@ -257,10 +257,10 @@ endif
 
 " Remove GUI in gVIM"
 if has('gui_running')
-		set guioptions-=m "Remove menu bar
-		set guioptions-=T "Remove toolbar
-		set guioptions-=r "Remove right-hand scroll bar
-		set guioptions-=L "Remove left-hand scroll bar
+  set guioptions-=m "Remove menu bar
+  set guioptions-=T "Remove toolbar
+  set guioptions-=r "Remove right-hand scroll bar
+  set guioptions-=L "Remove left-hand scroll bar
 endif
 
 set t_Co=256 "To correctly display colorscheme in terminals
