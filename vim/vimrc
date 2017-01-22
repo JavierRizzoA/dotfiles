@@ -68,6 +68,7 @@ Plugin 'rargo/vim-tab'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'mattn/emmet-vim'
 "Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -207,6 +208,27 @@ augroup END
 augroup filetype_python
   autocmd!
   au Filetype python setlocal ts=4 sw=4
+augroup END
+
+augroup filetype_haxe
+  autocmd!
+  au Filetype haxe nnoremap <F5> :!lime test neko<CR>
+  au Filetype haxe nnoremap <F6> :!lime test neko -debug<CR>
+augroup END
+
+augroup filetype_javascript
+  autocmd!
+  au Filetype javascript noremap <F5> :!npm run test<CR>
+augroup END
+
+augroup filetype_html
+  autocmd!
+  au Filetype html noremap <F5> :!npm run test<CR>
+augroup END
+
+augroup filetype_css
+  autocmd!
+  au Filetype css noremap <F5> :!npm run test<CR>
 augroup END
 
 " ------------------------------------------------------------------------------
