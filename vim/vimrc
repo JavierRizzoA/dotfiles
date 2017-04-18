@@ -216,6 +216,11 @@ augroup filetype_haxe
   au Filetype haxe nnoremap <F6> :!lime test neko -debug<CR>
 augroup END
 
+augroup filetype_latex
+  au Filetype tex nnoremap <F5> :!pdflatex Document.tex && evince Document.pdf<CR>
+  au Filetype tex nnoremap <F6> :!pdflatex Document.tex && bibtex Document.aux && pdflatex Document.tex && pdflatex Document.tex && evince Document.pdf<CR>
+augroup END
+
 augroup filetype_javascript
   autocmd!
   au Filetype javascript noremap <F5> :!npm run test<CR>
