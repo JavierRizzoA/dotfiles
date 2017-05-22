@@ -117,6 +117,11 @@ let g:syntastic_python_python_exec = '/usr/bin/python2'
 
 " ------------------------------------------------------------------------------
 
+"Vimwiki
+let g:vimwiki_list =[{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" ------------------------------------------------------------------------------
+
 " vim-tab
 "reload GTAGS, ctags.
 function! TabReloadCGtag()
@@ -197,7 +202,7 @@ endif
 augroup read_optimized
   autocmd!
   "TXTs and WIKIs should wrap for readability
-  au BufNewFile,BufRead *.txt,*.wiki setlocal wrap lbr
+  au BufNewFile,BufRead *.txt,*.wiki,*.md setlocal wrap lbr
   "Mappings should be graphical, as text is wrapped.
   au BufNewFile,BufRead *.txt,*.wiki noremap j gj
   au BufNewFile,BufRead *.txt,*.wiki noremap k gk
