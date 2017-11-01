@@ -16,3 +16,5 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 alias vim='nvim'
+
+export PATH=/usr/lib/jvm/java-7-jdk/bin:$PATH

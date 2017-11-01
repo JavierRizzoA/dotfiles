@@ -69,6 +69,7 @@ Plugin 'rargo/vim-tab'
 Plugin 'mattn/emmet-vim'
 "Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -219,6 +220,7 @@ augroup filetype_haxe
   autocmd!
   au Filetype haxe nnoremap <F5> :!lime test neko<CR>
   au Filetype haxe nnoremap <F6> :!lime test neko -debug<CR>
+  au Filetype haxe nnoremap <F7> :!lime test android<CR>
 augroup END
 
 augroup filetype_latex
