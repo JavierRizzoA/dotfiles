@@ -58,16 +58,10 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/vimwiki'
 Plugin 'tpope/vim-surround'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'tmhedberg/matchit'
-Plugin 'scrooloose/syntastic'
 Plugin 'sjl/badwolf'
-Plugin 'tpope/vim-rails'
 Plugin 'vim-scripts/loremipsum'
-Plugin 'rargo/vim-tab'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'mattn/emmet-vim'
-"Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wakatime/vim-wakatime'
 
@@ -146,21 +140,6 @@ function! TabLeaveTag(nr)
   "nothing
 endfunction
 let g:TabTagTrigger = {'name':'TabTagTriger','pattern':"pattern", 'enter_callback':"TabEnterTag", 'leave_callback':"TabLeaveTag" }
-
-"call tab#TabShowTrigger()
-call tab#TabAddTrigger(g:TabTagTrigger)
-
-"movement between tabs
-"nnoremap 1 :tabn 1<cr>
-"nnoremap 2 :tabn 2<cr>
-"nnoremap 3 :tabn 3<cr>
-"nnoremap 4 :tabn 4<cr>
-"nnoremap 5 :tabn 5<cr>
-"nnoremap 6 :tabn 6<cr>
-"nnoremap 7 :tabn 7<cr>
-"nnoremap 8 :tabn 8<cr>
-"nnoremap 9 :tabn 9<cr>
-"nnoremap <C-c> :tabclose<cr>
 
 " ------------------------------------------------------------------------------
 "	MISC
