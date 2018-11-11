@@ -4,7 +4,13 @@ My Unix dotfiles
 
 ## Installation
 
-Just clone and run `dotfiles.sh`. I.e.:
+If using `nvim`, `$XDG_CONFIG_HOME` must be defined, if not, run
+
+```
+export XDG_CONFIG_HOME="$HOME/.config"
+```
+
+and then just clone and run `dotfiles.sh`. I.e.:
 
 ```bash
 git clone https://github.com/JavierRizzoA/dotfiles.git ~/.dotfiles

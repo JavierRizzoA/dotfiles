@@ -58,7 +58,7 @@ then
   mkdir -p nvim
   cd nvim
   rm -f init.vim
-  ln -s "$DIR/vim/vimrc" init.vim
+  ln "$DIR/vim/vimrc" init.vim
   rm -rf bundle
   ln -s "$DIR/vim/bundle" bundle
 fi
